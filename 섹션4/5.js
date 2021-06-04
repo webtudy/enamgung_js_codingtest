@@ -1,7 +1,6 @@
 function max_num(pick, arr) {
     let n = arr.length;
     let com_arr = [];
-    let ret = [];
     for (i = 0; i < n - 2; i++) {
         for (j = 1; j + i < n - 1; j++) {
             for (k = 1; k + j + i < n; k++) {
@@ -17,13 +16,9 @@ function max_num(pick, arr) {
         return b - a;
     });
     let unique = com_arr.filter((item, pos) => com_arr.indexOf(item) === pos);
-    //console.log(unique);
-    for (i = 0; i < pick; i++) {
-        ret.push(Math.max.apply(null, unique));
-        unique.shift();
-        //console.log(unique[0]);
-    }
-    return ret[pick - 1];
+    console.log(unique);
+
+    return unique[pick - 1];
 }
 
 pick = 3;

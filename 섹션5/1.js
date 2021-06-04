@@ -38,7 +38,7 @@ function comb_arr(arr_1, arr_2) {
         } //최솟값이 a라면 arr_1에서 a를 삭제
         else {
             arr_2.splice(arr_2.indexOf(b), 1);
-            arr_1.push(Number.MAX_SAFE_INTEGER);
+            arr_2.push(Number.MAX_SAFE_INTEGER);
         } //최솟값이 b라면 arr_2에서 b를 삭제
         //console.log(k, arr_1, arr_2, ret);
         i++;
